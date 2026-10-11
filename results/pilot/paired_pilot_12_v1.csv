@@ -1,0 +1,43 @@
+question_id,method,domain,length_category,ground_truth,predicted,correct,valid_response,raw_response,input_tokens,generation_seconds,retrieval_index_seconds,retrieval_query_seconds,new_embeddings
+66ec356a821e116aacb1c22b,Long Context,Multi-Document QA,short,C,C,True,True,"{
+  ""answer"": ""C""
+}",10993,1.4865761870005372,,,
+66ec356a821e116aacb1c22b,RAG Top-5,Multi-Document QA,short,C,C,True,True,"{""answer"": ""C""}",5308,3.328023829000813,13.513240738000604,0.3572939179994137,12.0
+66ebbe4f5a08c7b9b35de533,Long Context,Single-Document QA,short,C,B,False,True,"{""answer"": ""B""}",18495,10.860792540999682,,,
+66ebbe4f5a08c7b9b35de533,RAG Top-5,Single-Document QA,short,C,C,True,True,"{""answer"": ""C""}",5281,4.735982411000805,2.6339985197409987e-06,0.3755211619991314,0.0
+66ebb0e55a08c7b9b35ddd6a,Long Context,Single-Document QA,short,D,D,True,True,"{
+  ""answer"": ""D""
+}",20014,2.4341059560010763,,,
+66ebb0e55a08c7b9b35ddd6a,RAG Top-5,Single-Document QA,short,D,D,True,True,"{""answer"": ""D""}",4541,3.074423644999115,27.01798455799872,0.3530397529993934,22.0
+66ebf9bf5a08c7b9b35e1f85,Long Context,Multi-Document QA,short,D,D,True,True,"{
+  ""answer"": ""D""
+}",54132,2.49971708799967,,,
+66ebf9bf5a08c7b9b35e1f85,RAG Top-5,Multi-Document QA,short,D,D,True,True,"{""answer"": ""D""}",5533,3.4484214749991224,89.40383819599992,0.3689898169996013,56.0
+66ec0c4c821e116aacb1994a,Long Context,Multi-Document QA,medium,D,D,True,True,"{
+  ""answer"": ""D""
+}",67578,2.3298576599991065,,,
+66ec0c4c821e116aacb1994a,RAG Top-5,Multi-Document QA,medium,D,D,True,True,"{""answer"": ""D""}",5478,1.3684499959999812,101.78803939600039,0.37000959199940553,72.0
+66ebdfb65a08c7b9b35e140a,Long Context,Single-Document QA,medium,C,D,False,True,"{""answer"": ""D""}",103248,2.9710505029997876,,,
+66ebdfb65a08c7b9b35e140a,RAG Top-5,Single-Document QA,medium,C,C,True,True,"{""answer"": ""C""}",5584,1.3676625989992317,164.85099679799896,0.34463088499978767,110.0
+66ec2374821e116aacb1b423,Long Context,Single-Document QA,medium,B,C,False,True,"{""answer"": ""C""}",147326,3.532952491999822,,,
+66ec2374821e116aacb1b423,RAG Top-5,Single-Document QA,medium,B,C,False,True,"{""answer"": ""C""}",5324,1.5298829230014235,243.7355035540004,0.35809602399967844,155.0
+66eb873c5a08c7b9b35dd849,Long Context,Multi-Document QA,medium,B,B,True,True,"{
+  ""answer"": ""B""
+}",154481,4.16477688499981,,,
+66eb873c5a08c7b9b35dd849,RAG Top-5,Multi-Document QA,medium,B,B,True,True,"{""answer"": ""B""}",7106,1.4903696130004391,193.07838648600045,0.3849911039997096,125.0
+66ebc04a5a08c7b9b35de740,Long Context,Single-Document QA,long,B,D,False,True,"{
+  ""answer"": ""D""
+}",380519,8.377339294000194,,,
+66ebc04a5a08c7b9b35de740,RAG Top-5,Single-Document QA,long,B,D,False,True,"{
+  ""answer"": ""D""
+}",5662,1.5748428420010896,615.9212318690006,0.42237834299885435,390.0
+66f00f1a821e116aacb252cf,Long Context,Multi-Document QA,long,B,A,False,True,"{""answer"": ""A""}",407998,10.70440019599846,,,
+66f00f1a821e116aacb252cf,RAG Top-5,Multi-Document QA,long,B,A,False,True,"{
+  ""answer"": ""A""
+}",5388,2.654435402000672,678.3859585009995,0.3836651019992132,424.0
+66ed3960821e116aacb1f616,Long Context,Multi-Document QA,long,C,C,True,True,"{""answer"": ""C""}",594211,11.554417028999524,,,
+66ed3960821e116aacb1f616,RAG Top-5,Multi-Document QA,long,C,B,False,True,"{""answer"": ""B""}",5519,1.1969358290007222,980.6386854399989,0.3810432120008045,621.0
+66ead7bd5a08c7b9b35dca7a,Long Context,Single-Document QA,long,D,D,True,True,"{
+  ""answer"": ""D""
+}",667058,14.089697505998629,,,
+66ead7bd5a08c7b9b35dca7a,RAG Top-5,Single-Document QA,long,D,D,True,True,"{""answer"": ""D""}",7482,1.6896470169995155,828.1008501199994,0.3360443400015356,527.0
