@@ -1,0 +1,339 @@
+question_id,method,domain,length_category,ground_truth,predicted,correct,valid_response,raw_response,input_tokens,generation_seconds,retrieval_index_seconds,retrieval_query_seconds,new_embeddings,finish_reason
+66f37eb9821e116aacb2d295,Long Context,Multi-Document QA,short,B,B,True,True,"{""answer"": ""B""}",10272,1.840533661999871,,,,STOP
+66f37eb9821e116aacb2d295,RAG Top-5,Multi-Document QA,short,B,B,True,True,"{""answer"": ""B""}",5218,1.8236875870002225,13.3023517620004,0.4076364110001123,12.0,STOP
+66f3abe6821e116aacb2e1d2,Long Context,Multi-Document QA,short,C,C,True,True,"{""answer"": ""C""}",11312,1.8477891719999209,,,,STOP
+66f3abe6821e116aacb2e1d2,RAG Top-5,Multi-Document QA,short,C,C,True,True,"{""answer"": ""C""}",5280,1.7233901390000028,13.292671788999996,0.3613052629998492,13.0,STOP
+66f2b676821e116aacb2b27a,Long Context,Single-Document QA,short,B,B,True,True,"{
+  ""answer"": ""B""
+}",14060,2.175720888000342,,,,STOP
+66f2b676821e116aacb2b27a,RAG Top-5,Single-Document QA,short,B,B,True,True,"{""answer"": ""B""}",5894,3.042002055000012,13.43561767400024,0.3914738290000059,14.0,STOP
+67040276bb02136c067cd8ae,Long Context,Single-Document QA,short,B,B,True,True,"{
+  ""answer"": ""B""
+}",14388,2.3080436770001143,,,,STOP
+67040276bb02136c067cd8ae,RAG Top-5,Single-Document QA,short,B,B,True,True,"{
+  ""answer"": ""B""
+}",5530,2.0047643129996686,13.291722338,0.3607620200000383,15.0,STOP
+66f78ecfbb02136c067c2f12,Long Context,Multi-Document QA,short,B,C,False,True,"{""answer"": ""C""}",15402,2.05276779299993,,,,STOP
+66f78ecfbb02136c067c2f12,RAG Top-5,Multi-Document QA,short,B,C,False,True,"{""answer"": ""C""}",5310,1.5076848339999742,25.919100226999944,0.3773974890000318,17.0,STOP
+6704a83dbb02136c067cde1b,Long Context,Single-Document QA,short,B,D,False,True,"{""answer"": ""D""}",16338,2.12131545200009,,,,STOP
+6704a83dbb02136c067cde1b,RAG Top-5,Single-Document QA,short,B,D,False,True,"{""answer"": ""D""}",5759,1.6326732470001843,25.743738595000195,0.4597214579998763,17.0,STOP
+66fa7f1dbb02136c067c6e6b,Long Context,Multi-Document QA,short,D,D,True,True,"{""answer"": ""D""}",16652,2.3528155320000224,,,,STOP
+66fa7f1dbb02136c067c6e6b,RAG Top-5,Multi-Document QA,short,D,D,True,True,"{""answer"": ""D""}",5423,2.208594200999869,25.674949591999848,0.4415192480000769,17.0,STOP
+66fab4bfbb02136c067c754c,Long Context,Multi-Document QA,short,C,B,False,True,"{""answer"": ""B""}",17579,1.8314747790000183,,,,STOP
+66fab4bfbb02136c067c754c,RAG Top-5,Multi-Document QA,short,C,A,False,True,"{""answer"": ""A""}",5401,5.323277793000216,25.93554939800015,0.4243526870000096,18.0,STOP
+66ebd92d5a08c7b9b35e0bf0,Long Context,Single-Document QA,short,B,B,True,True,"{""answer"": ""B""}",17713,1.5035617089997686,,,,STOP
+66ebd92d5a08c7b9b35e0bf0,RAG Top-5,Single-Document QA,short,B,B,True,True,"{""answer"": ""B""}",4531,2.6078926709997177,26.026165744999616,0.4691424399998141,20.0,STOP
+66f3918f821e116aacb2d8b7,Long Context,Single-Document QA,short,D,A,False,True,"{""answer"": ""A""}",18066,1.7351375260000168,,,,STOP
+66f3918f821e116aacb2d8b7,RAG Top-5,Single-Document QA,short,D,A,False,True,"{""answer"": ""A""}",5384,1.840259326999785,25.9752288210002,0.3916125320001811,19.0,STOP
+66ebca1e5a08c7b9b35df5e8,Long Context,Single-Document QA,short,A,B,False,True,"{""answer"": ""B""}",18253,1.750568433999888,,,,STOP
+66ebca1e5a08c7b9b35df5e8,RAG Top-5,Single-Document QA,short,A,B,False,True,"{""answer"": ""B""}",4673,2.362689072000194,25.990098389000195,0.3671660619997965,20.0,STOP
+66ebd22e5a08c7b9b35e0126,Long Context,Single-Document QA,short,B,B,True,True,"{
+  ""answer"": ""B""
+}",18570,1.9596591889999213,,,,STOP
+66ebd22e5a08c7b9b35e0126,RAG Top-5,Single-Document QA,short,B,B,True,True,"{""answer"": ""B""}",4847,1.648013954999897,25.814933211000152,0.2536749139999301,20.0,STOP
+66ec41d3821e116aacb1c874,Long Context,Single-Document QA,short,D,D,True,True,"{""answer"": ""D""}",20618,2.5335483020000997,,,,STOP
+66ec41d3821e116aacb1c874,RAG Top-5,Single-Document QA,short,D,D,True,True,"{""answer"": ""D""}",5448,2.3033943529999306,26.68981610899982,0.5317632700000559,21.0,STOP
+66ee490e821e116aacb2149c,Long Context,Multi-Document QA,short,C,C,True,True,"{""answer"": ""C""}",22291,2.601099514999987,,,,STOP
+66ee490e821e116aacb2149c,RAG Top-5,Multi-Document QA,short,C,C,True,True,"{""answer"": ""C""}",5875,1.663549095999997,26.93228024600012,0.5237661639998805,22.0,STOP
+66ec2e2a821e116aacb1bb9f,Long Context,Single-Document QA,short,D,D,True,True,"{""answer"": ""D""}",22668,2.2659983759999704,,,,STOP
+66ec2e2a821e116aacb1bb9f,RAG Top-5,Single-Document QA,short,D,D,True,True,"{""answer"": ""D""}",5408,2.814505636000149,26.51906240199992,0.5244513189998088,24.0,STOP
+66ebce825a08c7b9b35dfc75,Long Context,Single-Document QA,short,C,C,True,True,"{""answer"": ""C""}",23955,2.525284122999892,,,,STOP
+66ebce825a08c7b9b35dfc75,RAG Top-5,Single-Document QA,short,C,C,True,True,"{""answer"": ""C""}",5645,2.0645969900001546,39.40769069999988,0.5303100670000731,25.0,STOP
+66ebed525a08c7b9b35e1cb4,Long Context,Single-Document QA,short,B,A,False,True,"{
+  ""answer"": ""A""
+}",24122,4.443964241000003,,,,STOP
+66ebed525a08c7b9b35e1cb4,RAG Top-5,Single-Document QA,short,B,A,False,True,"{""answer"": ""A""}",5281,1.912269549999792,39.09200593100013,0.5379308669998863,27.0,STOP
+66ebcc1e5a08c7b9b35df87d,Long Context,Single-Document QA,short,C,A,False,True,"{""answer"": ""A""}",25237,2.492391742999871,,,,STOP
+66ebcc1e5a08c7b9b35df87d,RAG Top-5,Single-Document QA,short,C,A,False,True,"{""answer"": ""A""}",5397,1.9896927689999304,39.472772636999935,0.5376422360000106,27.0,STOP
+66fa6867bb02136c067c6b3b,Long Context,Multi-Document QA,short,D,D,True,True,"{""answer"": ""D""}",25995,2.258377966999888,,,,STOP
+66fa6867bb02136c067c6b3b,RAG Top-5,Multi-Document QA,short,D,D,True,True,"{""answer"": ""D""}",6105,1.787351569000066,39.18946576999997,0.5279281830000855,26.0,STOP
+66ec0f3c821e116aacb19d70,Long Context,Single-Document QA,short,A,A,True,True,"{""answer"": ""A""}",26973,2.290598887999977,,,,STOP
+66ec0f3c821e116aacb19d70,RAG Top-5,Single-Document QA,short,A,A,True,True,"{""answer"": ""A""}",5465,2.2409331039998506,39.59963123500006,0.509636166999826,28.0,STOP
+66f0ed5a821e116aacb265ab,Long Context,Multi-Document QA,short,C,C,True,True,"{
+  ""answer"": ""C""
+}",27045,2.2208689059998505,,,,STOP
+66f0ed5a821e116aacb265ab,RAG Top-5,Multi-Document QA,short,C,C,True,True,"{""answer"": ""C""}",5383,1.772846411999808,39.42642254599991,0.5375124370000322,29.0,STOP
+66f95126bb02136c067c5070,Long Context,Multi-Document QA,short,C,C,True,True,"{
+  ""answer"": ""C""
+}",28515,2.480239230000052,,,,STOP
+66f95126bb02136c067c5070,RAG Top-5,Multi-Document QA,short,C,D,False,True,"{""answer"": ""D""}",5438,2.27099181199992,38.95877342499989,0.5345158270001775,30.0,STOP
+66f8d84cbb02136c067c465f,Long Context,Single-Document QA,short,C,B,False,True,"{""answer"": ""B""}",28654,2.610765967000134,,,,STOP
+66f8d84cbb02136c067c465f,RAG Top-5,Single-Document QA,short,C,D,False,True,"{
+  ""answer"": ""D""
+}",6218,3.677188889000263,39.45828997299986,0.5356043530000534,28.0,STOP
+66ece958821e116aacb1df04,Long Context,Single-Document QA,short,B,D,False,True,"{""answer"": ""D""}",30448,2.4222007389998907,,,,STOP
+66ece958821e116aacb1df04,RAG Top-5,Single-Document QA,short,B,D,False,True,"{""answer"": ""D""}",5587,2.9144223830003284,39.678967893999925,0.6319726540000374,32.0,STOP
+66ec0d4b821e116aacb19af8,Long Context,Single-Document QA,short,B,B,True,True,"{""answer"": ""B""}",30654,2.3421298489997757,,,,STOP
+66ec0d4b821e116aacb19af8,RAG Top-5,Single-Document QA,short,B,D,False,True,"{""answer"": ""D""}",5606,2.312596700000085,40.04677543600019,0.5819029280000905,32.0,STOP
+66eefe85821e116aacb228dc,Long Context,Multi-Document QA,short,A,A,True,True,"{
+  ""answer"": ""A""
+}",30666,2.775986200999796,,,,STOP
+66eefe85821e116aacb228dc,RAG Top-5,Multi-Document QA,short,A,A,True,True,"{""answer"": ""A""}",5525,2.193223130000206,52.92959309800017,0.556671570999697,33.0,STOP
+66f3b843821e116aacb2e692,Long Context,Multi-Document QA,short,C,B,False,True,"{""answer"": ""B""}",34817,2.3887081120001312,,,,STOP
+66f3b843821e116aacb2e692,RAG Top-5,Multi-Document QA,short,C,C,True,True,"{""answer"": ""C""}",5626,1.8897698559999296,52.2328709870003,0.5198137730003509,36.0,STOP
+66f52926821e116aacb32b5e,Long Context,Single-Document QA,short,C,C,True,True,"{
+  ""answer"": ""C""
+}",36301,2.815248024000084,,,,STOP
+66f52926821e116aacb32b5e,RAG Top-5,Single-Document QA,short,C,C,True,True,"{""answer"": ""C""}",4765,1.9856209570002648,52.50105275099986,0.4818343339998137,38.0,STOP
+66faac15bb02136c067c73f3,Long Context,Multi-Document QA,short,C,C,True,True,"{""answer"": ""C""}",41900,2.944188768999993,,,,STOP
+66faac15bb02136c067c73f3,RAG Top-5,Multi-Document QA,short,C,A,False,True,"{""answer"": ""A""}",5056,3.075767337999878,66.16328915699978,0.4959558519999518,45.0,STOP
+66f7a96cbb02136c067c3255,Long Context,Multi-Document QA,short,A,A,True,True,"{""answer"": ""A""}",46333,5.048118764999799,,,,STOP
+66f7a96cbb02136c067c3255,RAG Top-5,Multi-Document QA,short,A,A,True,True,"{""answer"": ""A""}",5371,2.3602841349998016,78.14060785899983,0.6778950379998605,49.0,STOP
+67078ecabb02136c067d0b89,Long Context,Multi-Document QA,short,B,B,True,True,"{""answer"": ""B""}",46916,3.3285276230003547,,,,STOP
+67078ecabb02136c067d0b89,RAG Top-5,Multi-Document QA,short,B,B,True,True,"{""answer"": ""B""}",5356,1.784008010999969,78.02402542600021,0.5257381359997453,51.0,STOP
+66f3e473821e116aacb2fa73,Long Context,Multi-Document QA,medium,B,C,False,True,"{
+  ""answer"": ""C""
+}",47435,2.8066721669997605,,,,STOP
+66f3e473821e116aacb2fa73,RAG Top-5,Multi-Document QA,medium,B,C,False,True,"{""answer"": ""C""}",5590,2.332408904000204,77.94317823799975,0.5174172110000654,50.0,STOP
+66ec18a7821e116aacb1a72e,Long Context,Single-Document QA,short,C,C,True,True,"{""answer"": ""C""}",47960,3.1370484600001878,,,,STOP
+66ec18a7821e116aacb1a72e,RAG Top-5,Single-Document QA,short,C,A,False,True,"{""answer"": ""A""}",5956,2.156042170000092,65.2999466010001,0.5486996240001645,47.0,STOP
+66f3c1ab821e116aacb2ead1,Long Context,Multi-Document QA,short,D,D,True,True,"{
+  ""answer"": ""D""
+}",51249,2.57535797699984,,,,STOP
+66f3c1ab821e116aacb2ead1,RAG Top-5,Multi-Document QA,short,D,C,False,True,"{""answer"": ""C""}",5955,1.7722759549997136,78.81237196899974,0.5191641589999563,51.0,STOP
+66f2ad2b821e116aacb2ac0f,Long Context,Multi-Document QA,short,A,A,True,True,"{
+  ""answer"": ""A""
+}",53822,3.120122700000138,,,,STOP
+66f2ad2b821e116aacb2ac0f,RAG Top-5,Multi-Document QA,short,A,A,True,True,"{""answer"": ""A""}",5490,2.6820658610004102,91.75497340499987,0.5185078159997829,57.0,STOP
+66f2a98a821e116aacb2a8bf,Long Context,Multi-Document QA,short,B,B,True,True,"{""answer"": ""B""}",54189,3.592045728000357,,,,STOP
+66f2a98a821e116aacb2a8bf,RAG Top-5,Multi-Document QA,short,B,B,True,True,"{""answer"": ""B""}",5457,1.7971990189998903,78.22079015999998,0.5428409840001223,55.0,STOP
+66f3de02821e116aacb2f73b,Long Context,Multi-Document QA,short,D,A,False,True,"{
+  ""answer"": ""A""
+}",62167,3.194166562000192,,,,STOP
+66f3de02821e116aacb2f73b,RAG Top-5,Multi-Document QA,short,D,A,False,True,"{""answer"": ""A""}",5634,1.9341946290001035,91.34956863099978,0.5411108959997364,64.0,STOP
+66f950acbb02136c067c5021,Long Context,Single-Document QA,medium,A,B,False,True,"{
+  ""answer"": ""B""
+}",70802,2.973312337000152,,,,STOP
+66f950acbb02136c067c5021,RAG Top-5,Single-Document QA,medium,A,B,False,True,"{""answer"": ""B""}",5494,2.1780358930000148,129.24160343600033,0.5416688830000567,73.0,STOP
+66f8c783bb02136c067c44b8,Long Context,Multi-Document QA,medium,B,B,True,True,"{
+  ""answer"": ""B""
+}",74937,2.8231118600001537,,,,STOP
+66f8c783bb02136c067c44b8,RAG Top-5,Multi-Document QA,medium,B,B,True,True,"{""answer"": ""B""}",5848,2.467041519000304,129.56264096799987,0.5525112279997302,81.0,STOP
+66fc05b6bb02136c067c88e4,Long Context,Multi-Document QA,medium,A,A,True,True,"{""answer"": ""A""}",75088,3.2594386969999505,,,,STOP
+66fc05b6bb02136c067c88e4,RAG Top-5,Multi-Document QA,medium,A,A,True,True,"{""answer"": ""A""}",5967,2.0069211140003063,116.99029516099972,0.5378115590001471,79.0,STOP
+670fb813bb02136c067d2bec,Long Context,Single-Document QA,medium,D,C,False,True,"{""answer"": ""C""}",80159,3.231940986999689,,,,STOP
+670fb813bb02136c067d2bec,RAG Top-5,Single-Document QA,medium,D,C,False,True,"{""answer"": ""C""}",5498,2.2473984909997853,129.82785961399986,0.5122601350003606,84.0,STOP
+66f4cd2c821e116aacb316ef,Long Context,Single-Document QA,medium,D,D,True,True,"{""answer"": ""D""}",81053,2.607192221999867,,,,STOP
+66f4cd2c821e116aacb316ef,RAG Top-5,Single-Document QA,medium,D,D,True,True,"{""answer"": ""D""}",6112,2.107779565000783,129.73628086100007,0.6454661899997518,82.0,STOP
+66f3c806821e116aacb2ed77,Long Context,Multi-Document QA,medium,C,C,True,True,"{
+  ""answer"": ""C""
+}",82820,3.048956705999444,,,,STOP
+66f3c806821e116aacb2ed77,RAG Top-5,Multi-Document QA,medium,C,D,False,True,"{""answer"": ""D""}",6666,3.120618110000578,116.70828820499992,0.5185508579997986,75.0,STOP
+66f920d8bb02136c067c4b81,Long Context,Single-Document QA,medium,C,C,True,True,"{
+  ""answer"": ""C""
+}",83695,4.603529744000298,,,,STOP
+66f920d8bb02136c067c4b81,RAG Top-5,Single-Document QA,medium,C,C,True,True,"{""answer"": ""C""}",4990,1.9436425869998857,142.22842089300048,0.5561240810002346,95.0,STOP
+66ed364d821e116aacb1f47e,Long Context,Multi-Document QA,medium,D,D,True,True,"{
+  ""answer"": ""D""
+}",85440,2.679839348999849,,,,STOP
+66ed364d821e116aacb1f47e,RAG Top-5,Multi-Document QA,medium,D,B,False,True,"{
+  ""answer"": ""B""
+}",5248,2.2041183979999914,142.53164828700028,0.5757494100007534,89.0,STOP
+66efa5ea821e116aacb23268,Long Context,Multi-Document QA,medium,D,D,True,True,"{
+  ""answer"": ""D""
+}",94726,2.9855513829998017,,,,STOP
+66efa5ea821e116aacb23268,RAG Top-5,Multi-Document QA,medium,D,D,True,True,"{""answer"": ""D""}",5959,1.9942687570001,130.7922544389994,0.526753746000395,85.0,STOP
+670fbb78bb02136c067d2cd3,Long Context,Single-Document QA,medium,B,B,True,True,"{""answer"": ""B""}",101077,3.2031220690005284,,,,STOP
+670fbb78bb02136c067d2cd3,RAG Top-5,Single-Document QA,medium,B,C,False,True,"{""answer"": ""C""}",5028,2.047236057000191,169.51640198099994,0.5170981560004293,107.0,STOP
+670fbbd0bb02136c067d2d04,Long Context,Single-Document QA,medium,D,D,True,True,"{""answer"": ""D""}",101099,7.752970923999783,,,,STOP
+670fbbd0bb02136c067d2d04,RAG Top-5,Single-Document QA,medium,D,B,False,True,"{""answer"": ""B""}",5370,1.689308656999856,169.14823632000025,0.5411650149999332,107.0,STOP
+66f3cca6821e116aacb2ef7c,Long Context,Multi-Document QA,medium,B,B,True,True,"{
+  ""answer"": ""B""
+}",108439,7.288811913000245,,,,MAX_TOKENS
+66f3cca6821e116aacb2ef7c,RAG Top-5,Multi-Document QA,medium,B,C,False,True,"{""answer"": ""C""}",5878,1.6984172849997776,172.64315071300007,0.6054605099998298,110.0,STOP
+66f016e6821e116aacb25497,Long Context,Multi-Document QA,medium,D,D,True,True,"{
+  ""answer"": ""D""
+}",116116,6.468393493999429,,,,STOP
+66f016e6821e116aacb25497,RAG Top-5,Multi-Document QA,medium,D,D,True,True,"{""answer"": ""D""}",5475,2.342542761999539,197.349559024,0.4937777349996395,123.0,STOP
+670646aebb02136c067cf85a,Long Context,Multi-Document QA,medium,B,C,False,True,"{""answer"": ""C""}",118150,4.380866813000466,,,,STOP
+670646aebb02136c067cf85a,RAG Top-5,Multi-Document QA,medium,B,B,True,True,"{""answer"": ""B""}",5526,1.774613927000246,183.9544342500003,0.6716024480001579,119.0,STOP
+6723a770bb02136c067d7233,Long Context,Single-Document QA,medium,D,D,True,True,"{
+  ""answer"": ""D""
+}",122821,3.060190505000719,,,,STOP
+6723a770bb02136c067d7233,RAG Top-5,Single-Document QA,medium,D,A,False,True,"{""answer"": ""A""}",6117,2.267578438999408,203.85951810499955,0.6452093629995943,126.0,STOP
+66ef8aa3821e116aacb22db5,Long Context,Single-Document QA,medium,B,B,True,True,"{""answer"": ""B""}",128028,3.7960126979996858,,,,STOP
+66ef8aa3821e116aacb22db5,RAG Top-5,Single-Document QA,medium,B,B,True,True,"{""answer"": ""B""}",5790,2.032386790999226,198.25486345199897,0.5847047740007838,123.0,STOP
+66f535c5821e116aacb33168,Long Context,Multi-Document QA,medium,B,B,True,True,"{""answer"": ""B""}",131423,3.899798907999866,,,,STOP
+66f535c5821e116aacb33168,RAG Top-5,Multi-Document QA,medium,B,A,False,True,"{""answer"": ""A""}",5737,1.6306276529994648,233.7584341210004,0.5358489970003575,145.0,STOP
+670aac92bb02136c067d218a,Long Context,Single-Document QA,medium,D,D,True,True,"{
+  ""answer"": ""D""
+}",141620,3.8655615799998486,,,,STOP
+670aac92bb02136c067d218a,RAG Top-5,Single-Document QA,medium,D,B,False,True,"{""answer"": ""B""}",5271,2.43602884000029,245.5998582150005,0.5169193040001119,154.0,STOP
+66f3d2fc821e116aacb2f269,Long Context,Single-Document QA,medium,B,D,False,True,"{""answer"": ""D""}",146621,4.264732458999788,,,,STOP
+66f3d2fc821e116aacb2f269,RAG Top-5,Single-Document QA,medium,B,D,False,True,"{""answer"": ""D""}",5821,1.4742551330000424,220.28752084999903,0.5269104399994831,139.0,STOP
+66f53ab2821e116aacb33299,Long Context,Multi-Document QA,medium,A,A,True,True,"{
+  ""answer"": ""A""
+}",149824,3.817947493000247,,,,STOP
+66f53ab2821e116aacb33299,RAG Top-5,Multi-Document QA,medium,A,A,True,True,"{
+  ""answer"": ""A""
+}",6781,1.682362761001059,206.9409428199997,0.5443839379986457,129.0,STOP
+66ed168b821e116aacb1ea8c,Long Context,Single-Document QA,medium,C,D,False,True,"{
+  ""answer"": ""D""
+}",150239,4.254478341999857,,,,STOP
+66ed168b821e116aacb1ea8c,RAG Top-5,Single-Document QA,medium,C,D,False,True,"{""answer"": ""D""}",6202,1.854103353000028,232.49714947899884,0.4740614330003154,148.0,STOP
+67239fd9bb02136c067d6ff7,Long Context,Single-Document QA,medium,A,A,True,True,"{
+  ""answer"": ""A""
+}",152233,4.20246670600136,,,,STOP
+67239fd9bb02136c067d6ff7,RAG Top-5,Single-Document QA,medium,A,A,True,True,"{""answer"": ""A""}",5684,2.308913470000334,232.82471401899969,0.5857549079992168,149.0,STOP
+66f28ede821e116aacb29a27,Long Context,Multi-Document QA,medium,B,A,False,True,"{""answer"": ""A""}",153493,4.031054054999913,,,,STOP
+66f28ede821e116aacb29a27,RAG Top-5,Multi-Document QA,medium,B,D,False,True,"{""answer"": ""D""}",5723,1.716753332000735,245.4930196639998,0.4968243619987333,158.0,STOP
+66f52d48821e116aacb32cf4,Long Context,Single-Document QA,medium,A,A,True,True,"{
+  ""answer"": ""A""
+}",168007,4.251518869999927,,,,STOP
+66f52d48821e116aacb32cf4,RAG Top-5,Single-Document QA,medium,A,A,True,True,"{""answer"": ""A""}",5386,2.340774506999878,287.6459470339996,0.4931228260011266,179.0,STOP
+66f947abbb02136c067c4ea6,Long Context,Multi-Document QA,medium,B,D,False,True,"{""answer"": ""D""}",168885,4.694739416001539,,,,STOP
+66f947abbb02136c067c4ea6,RAG Top-5,Multi-Document QA,medium,B,A,False,True,"{""answer"": ""A""}",6223,2.1720858450007654,246.9066456990004,0.5366394700013188,160.0,STOP
+670bf1c4bb02136c067d2341,Long Context,Single-Document QA,long,B,B,True,True,"{
+  ""answer"": ""B""
+}",168915,4.059122134000063,,,,STOP
+670bf1c4bb02136c067d2341,RAG Top-5,Single-Document QA,long,B,B,True,True,"{""answer"": ""B""}",5210,2.2914091079983336,297.70756749000066,0.472344186000555,186.0,STOP
+66f168d8821e116aacb27519,Long Context,Single-Document QA,medium,C,C,True,True,"{
+  ""answer"": ""C""
+}",172473,7.680044597000233,,,,STOP
+66f168d8821e116aacb27519,RAG Top-5,Single-Document QA,medium,C,C,True,True,"{""answer"": ""C""}",5483,2.224525685000117,285.2514852389995,0.5313262349991419,179.0,STOP
+67246903bb02136c067d74f2,Long Context,Single-Document QA,medium,A,A,True,True,"{
+  ""answer"": ""A""
+}",177480,4.281500044000495,,,,STOP
+67246903bb02136c067d74f2,RAG Top-5,Single-Document QA,medium,A,A,True,True,"{""answer"": ""A""}",5867,2.4331698679998226,283.9434039660009,0.5795959909992234,177.0,STOP
+6707b3cabb02136c067d1021,Long Context,Multi-Document QA,medium,A,B,False,True,"{
+  ""answer"": ""B""
+}",183482,4.66193973100053,,,,STOP
+6707b3cabb02136c067d1021,RAG Top-5,Multi-Document QA,medium,A,D,False,True,"{""answer"": ""D""}",7447,2.022675109999909,246.29855964299892,0.5361632900003315,157.0,STOP
+67246500bb02136c067d7423,Long Context,Single-Document QA,medium,C,C,True,True,"{
+  ""answer"": ""C""
+}",184249,5.157938349000688,,,,STOP
+67246500bb02136c067d7423,RAG Top-5,Single-Document QA,medium,C,B,False,True,"{""answer"": ""B""}",5427,1.9976541260002705,297.63682494800014,0.5676479180001479,189.0,STOP
+66ec2755821e116aacb1b6f2,Long Context,Single-Document QA,long,B,B,True,True,"{
+  ""answer"": ""B""
+}",185533,4.885094706000018,,,,STOP
+66ec2755821e116aacb1b6f2,RAG Top-5,Single-Document QA,long,B,B,True,True,"{""answer"": ""B""}",5324,2.345237719000579,311.24999488399953,0.5654044230013824,198.0,STOP
+66f519a6821e116aacb32579,Long Context,Single-Document QA,medium,D,D,True,True,"{""answer"": ""D""}",188420,10.402874174998942,,,,STOP
+66f519a6821e116aacb32579,RAG Top-5,Single-Document QA,medium,D,D,True,True,"{""answer"": ""D""}",5494,1.8418049230003817,314.77735645199937,0.5481662820002384,195.0,STOP
+67009bd8bb02136c067caba9,Long Context,Multi-Document QA,medium,B,B,True,True,"{
+  ""answer"": ""B""
+}",192349,3.962414469999203,,,,STOP
+67009bd8bb02136c067caba9,RAG Top-5,Multi-Document QA,medium,B,B,True,True,"{""answer"": ""B""}",5954,3.0679657660002704,297.63822099200115,0.4686970549992111,191.0,STOP
+670cf52abb02136c067d2728,Long Context,Single-Document QA,long,A,A,True,True,"{""answer"": ""A""}",195685,4.207201010000063,,,,STOP
+670cf52abb02136c067d2728,RAG Top-5,Single-Document QA,long,A,A,True,True,"{""answer"": ""A""}",5210,2.352273562000846,336.1000057580004,0.528819539998949,215.0,STOP
+66fb6527bb02136c067c7b4f,Long Context,Multi-Document QA,long,B,D,False,True,"{""answer"": ""D""}",205753,3.960625005998736,,,,STOP
+66fb6527bb02136c067c7b4f,RAG Top-5,Multi-Document QA,long,B,A,False,True,"{""answer"": ""A""}",4843,1.8199728069994308,337.02085274899946,0.4974813080007152,211.0,STOP
+66f167c3821e116aacb274f4,Long Context,Multi-Document QA,medium,C,B,False,True,"{
+  ""answer"": ""B""
+}",208440,5.952942534000613,,,,STOP
+66f167c3821e116aacb274f4,RAG Top-5,Multi-Document QA,medium,C,B,False,True,"{
+  ""answer"": ""B""
+}",5540,2.375661987998683,347.1201674589993,0.4870715170000039,223.0,STOP
+67239f49bb02136c067d6fc0,Long Context,Single-Document QA,long,A,A,True,True,"{
+  ""answer"": ""A""
+}",220879,5.131367381000018,,,,STOP
+67239f49bb02136c067d6fc0,RAG Top-5,Single-Document QA,long,A,C,False,True,"{""answer"": ""C""}",5725,1.5716662840004574,349.30422604399973,0.5152682370007824,224.0,STOP
+6724645dbb02136c067d73ad,Long Context,Single-Document QA,long,A,A,True,True,"{
+  ""answer"": ""A""
+}",222751,5.523678129000473,,,,STOP
+6724645dbb02136c067d73ad,RAG Top-5,Single-Document QA,long,A,A,True,True,"{""answer"": ""A""}",5909,2.3168087109988846,349.35129131099893,0.5458684400000493,221.0,STOP
+67095b87bb02136c067d1bad,Long Context,Single-Document QA,long,D,B,False,True,"{""answer"": ""B""}",224558,4.833136457000364,,,,STOP
+67095b87bb02136c067d1bad,RAG Top-5,Single-Document QA,long,D,B,False,True,"{""answer"": ""B""}",5567,2.238471123000636,374.6137032480001,0.5187539190010284,236.0,STOP
+66f2adaf821e116aacb2aca9,Long Context,Multi-Document QA,long,B,D,False,True,"{""answer"": ""D""}",224732,5.511562987998332,,,,STOP
+66f2adaf821e116aacb2aca9,RAG Top-5,Multi-Document QA,long,B,B,True,True,"{""answer"": ""B""}",5729,2.0896129940010724,362.0774506179987,0.5344696559986915,228.0,STOP
+66fa0d88bb02136c067c5a8a,Long Context,Multi-Document QA,long,C,A,False,True,"{""answer"": ""A""}",225522,8.490533575000882,,,,STOP
+66fa0d88bb02136c067c5a8a,RAG Top-5,Multi-Document QA,long,C,A,False,True,"{""answer"": ""A""}",5899,1.8286768299985847,361.4303577479986,0.5569383760011988,232.0,STOP
+66f25a2f821e116aacb28b2f,Long Context,Single-Document QA,medium,D,D,True,True,"{""answer"": ""D""}",232127,7.189354111000284,,,,STOP
+66f25a2f821e116aacb28b2f,RAG Top-5,Single-Document QA,medium,D,D,True,True,"{
+  ""answer"": ""D""
+}",5859,1.990868495999166,348.6709136589998,0.4888287369976751,223.0,STOP
+66efc5e3821e116aacb23df1,Long Context,Single-Document QA,long,D,D,True,True,"{
+  ""answer"": ""D""
+}",235941,6.040123314000084,,,,STOP
+66efc5e3821e116aacb23df1,RAG Top-5,Single-Document QA,long,D,D,True,True,"{""answer"": ""D""}",5827,1.7568037179989917,387.4798154230011,0.5409928650005895,244.0,STOP
+66f7c780bb02136c067c35e8,Long Context,Multi-Document QA,long,C,C,True,True,"{""answer"": ""C""}",239825,4.499829373999091,,,,STOP
+66f7c780bb02136c067c35e8,RAG Top-5,Multi-Document QA,long,C,A,False,True,"{""answer"": ""A""}",6173,1.814849389000301,387.13631141600126,0.5218171650012664,242.0,STOP
+66f5605a821e116aacb3381f,Long Context,Multi-Document QA,long,D,D,True,True,"{""answer"": ""D""}",244665,5.411337542998808,,,,STOP
+66f5605a821e116aacb3381f,RAG Top-5,Multi-Document QA,long,D,D,True,True,"{""answer"": ""D""}",5846,1.9006931469994013,413.46885899500194,0.4880629319995933,262.0,STOP
+66f8c9febb02136c067c4511,Long Context,Multi-Document QA,long,C,C,True,True,"{""answer"": ""C""}",245001,5.16946137999912,,,,STOP
+66f8c9febb02136c067c4511,RAG Top-5,Multi-Document QA,long,C,D,False,True,"{""answer"": ""D""}",5733,1.5744849699985934,401.245874799999,0.5242595189993153,254.0,STOP
+66fb8633bb02136c067c800b,Long Context,Multi-Document QA,medium,A,C,False,True,"{""answer"": ""C""}",245838,6.319001283998659,,,,STOP
+66fb8633bb02136c067c800b,RAG Top-5,Multi-Document QA,medium,A,A,True,True,"{""answer"": ""A""}",5955,1.955781910000951,374.41905021399725,0.6097718319979322,239.0,STOP
+66f3f947821e116aacb3029b,Long Context,Multi-Document QA,long,B,B,True,True,"{
+  ""answer"": ""B""
+}",247180,5.119549520000874,,,,STOP
+66f3f947821e116aacb3029b,RAG Top-5,Multi-Document QA,long,B,B,True,True,"{""answer"": ""B""}",7279,1.7868571380022331,394.2944680569999,0.5335509219949017,243.0,STOP
+66f50109821e116aacb31f16,Long Context,Multi-Document QA,medium,B,A,False,True,"{
+  ""answer"": ""A""
+}",253505,22.954706822994922,,,,STOP
+66f50109821e116aacb31f16,RAG Top-5,Multi-Document QA,medium,B,B,True,True,"{""answer"": ""B""}",5600,1.9682606179994764,374.87658306900266,0.5728147870031535,233.0,STOP
+66f97dc3bb02136c067c56c8,Long Context,Multi-Document QA,long,B,B,True,True,"{
+  ""answer"": ""B""
+}",254899,5.5116751349996775,,,,STOP
+66f97dc3bb02136c067c56c8,RAG Top-5,Multi-Document QA,long,B,B,True,True,"{""answer"": ""B""}",6544,2.309721425001044,401.49149403299816,0.558521634004137,249.0,STOP
+66fa190bbb02136c067c5d32,Long Context,Multi-Document QA,long,B,B,True,True,"{""answer"": ""B""}",255561,6.189325576997362,,,,STOP
+66fa190bbb02136c067c5d32,RAG Top-5,Multi-Document QA,long,B,B,True,True,"{""answer"": ""B""}",5967,1.5696921249982552,414.9499660119982,0.7458493489975808,257.0,STOP
+66f3f46f821e116aacb2ff5d,Long Context,Multi-Document QA,long,B,A,False,True,"{""answer"": ""A""}",265642,5.9320203739989665,,,,STOP
+66f3f46f821e116aacb2ff5d,RAG Top-5,Multi-Document QA,long,B,D,False,True,"{""answer"": ""D""}",5556,1.8516925989970332,451.78019585699803,0.5924935630027903,286.0,STOP
+66f55828821e116aacb3363e,Long Context,Multi-Document QA,long,D,D,True,True,"{""answer"": ""D""}",298801,6.7319881479998,,,,STOP
+66f55828821e116aacb3363e,RAG Top-5,Multi-Document QA,long,D,D,True,True,"{""answer"": ""D""}",5411,2.3262653889978537,538.452387229001,0.5945307769943611,340.0,STOP
+6703f73cbb02136c067cd74a,Long Context,Single-Document QA,long,B,D,False,True,"{
+  ""answer"": ""D""
+}",305703,6.8802481460006675,,,,STOP
+6703f73cbb02136c067cd74a,RAG Top-5,Single-Document QA,long,B,A,False,True,"{""answer"": ""A""}",5612,1.6397893319954164,493.7146096150027,0.5516697380007827,307.0,STOP
+66ebd55f5a08c7b9b35e0698,Long Context,Single-Document QA,long,A,A,True,True,"{""answer"": ""A""}",332817,8.199386321997736,,,,STOP
+66ebd55f5a08c7b9b35e0698,RAG Top-5,Single-Document QA,long,A,A,True,True,"{
+  ""answer"": ""A""
+}",5345,2.0727064970051288,569.9275198890027,0.6168792999960715,357.0,STOP
+66f24538821e116aacb2865e,Long Context,Multi-Document QA,long,D,B,False,True,"{""answer"": ""B""}",354963,9.146566146999248,,,,STOP
+66f24538821e116aacb2865e,RAG Top-5,Multi-Document QA,long,D,C,False,True,"{""answer"": ""C""}",5318,1.7788436229966464,598.191393551002,0.5449668139990536,373.0,STOP
+6724631ebb02136c067d7300,Long Context,Single-Document QA,long,D,D,True,True,"{
+  ""answer"": ""D""
+}",374418,7.200688197001,,,,STOP
+6724631ebb02136c067d7300,RAG Top-5,Single-Document QA,long,D,D,True,True,"{""answer"": ""D""}",5617,1.9586520640004892,619.8476740769984,0.5578029440002865,386.0,STOP
+66f11349821e116aacb269e0,Long Context,Multi-Document QA,long,A,A,True,True,"{""answer"": ""A""}",380759,8.144381026999326,,,,STOP
+66f11349821e116aacb269e0,RAG Top-5,Multi-Document QA,long,A,A,True,True,"{""answer"": ""A""}",5568,2.8843645160013693,658.8460207890021,0.538951709997491,413.0,STOP
+6704fe26bb02136c067ce670,Long Context,Multi-Document QA,long,C,C,True,True,"{
+  ""answer"": ""C""
+}",390268,7.620527859005961,,,,STOP
+6704fe26bb02136c067ce670,RAG Top-5,Multi-Document QA,long,C,A,False,True,"{""answer"": ""A""}",6762,1.8998956100040232,595.6448012750043,0.5485953149982379,376.0,STOP
+6703f57bbb02136c067cd714,Long Context,Single-Document QA,long,D,A,False,True,"{
+  ""answer"": ""A""
+}",414157,9.700086961005582,,,,STOP
+6703f57bbb02136c067cd714,RAG Top-5,Single-Document QA,long,D,D,True,True,"{""answer"": ""D""}",6238,1.591673135997553,609.7318461920004,0.6183624350014725,381.0,STOP
+66f43414821e116aacb310a1,Long Context,Multi-Document QA,long,D,D,True,True,"{
+  ""answer"": ""D""
+}",452029,11.399154401995474,,,,STOP
+66f43414821e116aacb310a1,RAG Top-5,Multi-Document QA,long,D,D,True,True,"{""answer"": ""D""}",5431,1.6656880700029433,730.086094930004,0.5734830330038676,449.0,STOP
+67040983bb02136c067cd996,Long Context,Single-Document QA,long,A,A,True,True,"{
+  ""answer"": ""A""
+}",455318,12.59440147800342,,,,STOP
+67040983bb02136c067cd996,RAG Top-5,Single-Document QA,long,A,B,False,True,"{""answer"": ""B""}",5661,2.185246763001487,764.6603717180042,0.5655938380004955,474.0,STOP
+66ebd2475a08c7b9b35e0155,Long Context,Single-Document QA,long,D,D,True,True,"{
+  ""answer"": ""D""
+}",480879,11.133203097997466,,,,STOP
+66ebd2475a08c7b9b35e0155,RAG Top-5,Single-Document QA,long,D,D,True,True,"{""answer"": ""D""}",5218,2.128319977004139,842.1749196979945,0.613362509997387,528.0,STOP
+66f40b9c821e116aacb30a99,Long Context,Multi-Document QA,long,C,C,True,True,"{
+  ""answer"": ""C""
+}",501121,9.754205628996715,,,,STOP
+66f40b9c821e116aacb30a99,RAG Top-5,Multi-Document QA,long,C,C,True,True,"{""answer"": ""C""}",7531,2.2318608079949627,762.3003870689936,0.5238376900015282,476.0,STOP
+66f954a5bb02136c067c511a,Long Context,Single-Document QA,long,B,B,True,True,"{
+  ""answer"": ""B""
+}",568559,11.976717010998982,,,,STOP
+66f954a5bb02136c067c511a,RAG Top-5,Single-Document QA,long,B,B,True,True,"{""answer"": ""B""}",5821,2.1896645730012096,932.7147864860017,0.668772753997473,579.0,STOP
+66f1cd02821e116aacb27d3f,Long Context,Single-Document QA,long,B,B,True,True,"{
+  ""answer"": ""B""
+}",572875,14.1870718450009,,,,STOP
+66f1cd02821e116aacb27d3f,RAG Top-5,Single-Document QA,long,B,B,True,True,"{
+  ""answer"": ""B""
+}",5151,1.695393766000052,1012.5014565699967,0.5946159769955557,639.0,STOP
+66ebeb5a5a08c7b9b35e1ba5,Long Context,Single-Document QA,long,A,A,True,True,"{
+  ""answer"": ""A""
+}",597177,18.89955742500024,,,,MAX_TOKENS
+66ebeb5a5a08c7b9b35e1ba5,RAG Top-5,Single-Document QA,long,A,A,True,True,"{""answer"": ""A""}",5588,1.9949944149993826,1009.7906572830034,0.5750348509973264,626.0,STOP
+66f3e604821e116aacb2fadf,Long Context,Multi-Document QA,long,D,,False,False,"{
+  ""answer"": """,655499,16.469244047999382,,,,MAX_TOKENS
+66f3e604821e116aacb2fadf,RAG Top-5,Multi-Document QA,long,D,D,True,True,"{""answer"": ""D""}",5769,2.285092798003461,1112.6927156480015,0.6728223259997321,694.0,STOP
+66ebcc335a08c7b9b35df8b6,Long Context,Single-Document QA,long,D,,False,False,"{
+  ""answer"": ""D""",694354,22.16790756500268,,,,MAX_TOKENS
+66ebcc335a08c7b9b35df8b6,RAG Top-5,Single-Document QA,long,D,D,True,True,"{""answer"": ""D""}",5494,1.9216420670054504,1178.2511973939982,0.5684930990028079,735.0,STOP
+66ebd34d5a08c7b9b35e035d,Long Context,Single-Document QA,long,C,,False,False,"{
+  ""answer"": ""B""",882011,28.13563260599767,,,,MAX_TOKENS
+66ebd34d5a08c7b9b35e035d,RAG Top-5,Single-Document QA,long,C,B,False,True,"{""answer"": ""B""}",6065,2.0098956239962718,1544.1099065250019,0.6312520439969376,956.0,STOP
+66f3c5f2821e116aacb2eccf,Long Context,Multi-Document QA,long,A,,False,False,"{
+  ""answer"": """,963655,31.19963259599899,,,,MAX_TOKENS
+66f3c5f2821e116aacb2eccf,RAG Top-5,Multi-Document QA,long,A,B,False,True,"{""answer"": ""B""}",5540,2.2038627810034086,1568.8253162959954,0.5972943020024104,972.0,STOP
