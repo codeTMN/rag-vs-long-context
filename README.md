@@ -1,173 +1,73 @@
 # RAG vs. Long-Context Prompting
 
-## Overview
+When answering a question about a long document, is it better to give a language model **the entire context**, or **only the most relevant passages**?
 
-Large language models can now process very large amounts of text at once. That raises a practical question: if a model can read a long document directly, when is Retrieval-Augmented Generation (RAG) still useful?
+This research project compares those two approaches using the same questions and generation model:
 
-This project compares two ways of giving information to a language model for question answering:
+- **Long Context:** Gemini receives the full source text, question, and answer choices.
+- **Retrieval-Augmented Generation (RAG):** The document is split into chunks. An embedding model retrieves the five most relevant chunks, which are then sent to Gemini.
 
-- **Long-context prompting:** give the model the full source context and ask it to find the information it needs.
-- **Retrieval-Augmented Generation (RAG):** search the source material first, retrieve the most relevant passages, and give only those passages to the model.
+The goal is to understand the trade-off between **answer accuracy, input size, and processing time**, not to assume that one method is always better.
 
-The goal is not simply to build a RAG system. The goal is to experimentally measure how the two approaches compare as the amount of available context increases.
+## How the experiment works
 
-## Research Question
+The questions come from [LongBench v2](https://huggingface.co/datasets/zai-org/LongBench-v2). A balanced set of 120 questions was selected and frozen before evaluating answers: 20 questions in each combination of Single-Document or Multi-Document QA and short, medium, or long context.
 
-**How does Retrieval-Augmented Generation compare with direct long-context prompting for question answering as the amount of available context increases?**
+- **Pilot:** 12 questions used to check the workflow.
+- **Main experiment:** 108 separate questions, each answered by both methods (216 evaluations).
+- **Generation model:** Gemini 3.8 Flash.
+- **RAG setup:** Gemini Embedding 2, 1,000-token chunks, 100-token overlap, cosine similarity, top 5 passages.
+- **Evaluation:** Multiple-choice accuracy, paired statistical comparison, generation input tokens, and recorded timings.
 
-The final comparison will focus on measures such as answer accuracy, input size, response time, and retrieval-related measurements where they can be evaluated reliably.
+The pilot results were kept separate from the main analysis.
 
-## Why This Matters
+## Main results
 
-RAG is widely used because it lets a language model work with large collections of information without placing everything into one prompt. However, newer models now support much larger context windows.
+| Metric | Long Context | RAG Top-5 |
+| --- | ---: | ---: |
+| Correct answers | 73 / 108 | 62 / 108 |
+| Accuracy | **67.59%** | **57.41%** |
+| Average generation input tokens | 180,955 | 5,665 |
+| Average generation time | 5.71 s | 2.12 s |
 
-That creates a real tradeoff. Giving the model the full context avoids retrieval failures, but very large prompts can be slower, more expensive, and harder for the model to use effectively. RAG reduces the amount of text sent to the model, but it can fail when the retrieval step does not find the information needed to answer the question.
+![Overall accuracy comparison](figures/01_overall_accuracy.png)
 
-This project is designed to test that tradeoff under controlled conditions rather than assume that either method is always better.
+Long Context had **10.19 percentage points higher observed accuracy**. The exact paired McNemar test returned **p = 0.0522**, so this difference did **not** meet the 0.05 significance threshold.
 
-## Dataset
+RAG used **96.87% fewer input tokens during answer generation**, but this does **not** include its embedding and indexing work. The recorded RAG indexing time also includes API pacing and caching effects, so generation speed alone is not a full end-to-end efficiency comparison.
 
-The project uses **LongBench v2**.
+Four Long Context requests on long documents ended without a valid answer after reaching the configured output-token limit. They remain counted as unsuccessful attempts in the primary analysis.
 
-The full benchmark contains **503 examples** across several long-context task types. Because this research focuses specifically on question answering, the candidate pool was narrowed to:
+### A follow-up robustness check
 
-- **175 Single-Document QA examples**
-- **125 Multi-Document QA examples**
-- **300 total QA candidates**
+An additional analysis looked only at the **104 questions where both methods returned valid answers**:
 
-The QA candidate pool contains:
+| Metric | Long Context | RAG Top-5 |
+| --- | ---: | ---: |
+| Accuracy | 70.19% | 57.69% |
 
-| Context category | Examples |
-| --- | ---: |
-| Short | 132 |
-| Medium | 121 |
-| Long | 47 |
-| **Total** | **300** |
+The paired test for this subset gave **p = 0.0146**. However, excluding the four failed Long Context responses can introduce selection bias. **The original 108-question analysis remains the primary result**; this is a sensitivity check, not a replacement.
 
-The original contexts vary greatly in size, from thousands of words to more than one million words.
+## Where to find everything
 
-## Model Feasibility and Exact Tokenization
+| Location | What's inside |
+| --- | --- |
+| [Notebooks 01–04](notebooks/) | Dataset exploration, model selection, token counts, and sampling |
+| [Notebook 05](notebooks/05_paired_pilot.ipynb) | Pilot experiment |
+| [Notebook 06](notebooks/06_main_experiment.ipynb) | Main experiment and data checks |
+| [Notebook 07](notebooks/07_results_analysis.ipynb) | Accuracy, statistics, efficiency, error review, and charts |
+| [Notebook 08](notebooks/08_progress_report_3_demo.ipynb) | Read-only interactive results demonstration |
+| [Notebook 09](notebooks/09_robustness_check.ipynb) | Invalid-response sensitivity analysis |
+| [Results](results/) | Saved pilot and main experiment CSV files |
+| [Samples](samples/) | Frozen question lists |
+| [Figures](figures/) | Accuracy, context-length, token, and sensitivity charts |
 
-Several long-context model options were reviewed for context capacity, cost, accessibility, and reproducibility. **Gemini 3.8 Flash** was selected as the primary model for the current experiment.
+**Start here:** Open [the main results CSV](results/main/paired_main_108_v1.csv) to inspect the recorded answers, or [Notebook 07](notebooks/07_results_analysis.ipynb) for the full analysis. Notebook 08 provides a compact presentation of those saved results.
 
-Because model context limits are measured in tokens rather than words, all 300 QA candidates were measured using Gemini's actual token-counting endpoint.
+The notebooks were developed in Google Colab. Some read files from the project's Google Drive checkpoint folders; they are not all standalone one-click reproductions. Rerunning model inference requires a Gemini API key and may incur API charges. The saved results and figures can be inspected without rerunning the experiment.
 
-Gemini 3.8 Flash reports an input limit of **1,048,576 tokens**.
+## Current status
 
-The exact-tokenization results were:
+The main experiment, results analysis, and follow-up sensitivity check are complete. Final research write-up and presentation work are the remaining stages.
 
-- **300 / 300** candidate prompts successfully measured
-- **299** prompts fit within Gemini's full input limit
-- **1** prompt exceeded the limit and was excluded from full-context sampling
-
-Median prompt sizes were approximately:
-
-| Context category | Median exact tokens |
-| --- | ---: |
-| Short | 24,484 |
-| Medium | 108,439 |
-| Long | 352,030 |
-
-The largest candidate prompt contained approximately **1.87 million tokens**, so it could not be used as a genuine full-context prompt without truncation. It was excluded rather than shortened, because truncation could remove information needed to answer the question and unfairly weaken the long-context condition.
-
-## Frozen Experimental Sample
-
-From the 299 Gemini-feasible candidates, the final experimental sample was selected **before any question-answering model results were observed**.
-
-The sample contains **120 unique questions**, balanced across QA type and context length:
-
-| QA type | Short | Medium | Long | Total |
-| --- | ---: | ---: | ---: | ---: |
-| Single-Document QA | 20 | 20 | 20 | 60 |
-| Multi-Document QA | 20 | 20 | 20 | 60 |
-| **Total** | **40** | **40** | **40** | **120** |
-
-Sampling approximately preserves sub-domain representation within each QA-type/context-length group and uses the fixed random seed:
-
-`20260928`
-
-The frozen manifest is stored at:
-
-`samples/experimental_sample_v1.csv`
-
-Its SHA-256 checksum is:
-
-`eaed00fa4b0f2093b8bd3d004879f7ca5bd7a378c9d9a9622f00861ebd56e436`
-
-The checksum provides a reproducible fingerprint of the exact sample used for the experiment.
-
-## Current Progress
-
-Completed work:
-
-- Created the project repository and research structure.
-- Loaded and explored all 503 LongBench v2 examples.
-- Narrowed the benchmark to 300 relevant QA candidates.
-- Analyzed task type, context length, sub-domain distribution, and data quality.
-- Compared candidate long-context language models for feasibility.
-- Selected Gemini 3.8 Flash as the primary experimental model.
-- Measured exact Gemini token counts for all 300 QA candidates.
-- Identified 299 prompts that fit the full Gemini context window.
-- Constructed a balanced, reproducible 120-question experimental sample.
-- Validated that all 120 selected IDs are unique and fit the Gemini input limit.
-- Saved and checksummed the frozen sample before observing model-answering performance.
-
-No main question-answering results have been collected yet.
-
-## Research Notebooks
-
-The project is organized as a sequence of reproducible notebooks:
-
-- `notebooks/01_dataset_exploration.ipynb` — explores LongBench v2 and defines the QA candidate pool.
-- `notebooks/02_model_feasibility.ipynb` — compares model/context feasibility and rough experiment cost.
-- `notebooks/03_exact_tokenization.ipynb` — measures exact Gemini prompt sizes and determines the feasible pool.
-- `notebooks/04_experimental_sampling.ipynb` — constructs and validates the frozen 120-question sample.
-
-## Planned Experiment
-
-The same frozen questions and the same Gemini model will be used across experimental conditions so that the main variable is **how source information is supplied**.
-
-The planned comparison is:
-
-1. **Direct long-context prompting**
-2. **RAG with a small set of top-ranked retrieved passages**
-3. Additional retrieval depths if they are useful and remain within the project scope
-
-Results will be analyzed across:
-
-- Single-Document vs. Multi-Document QA
-- Short vs. Medium vs. Long contexts
-
-## Next Steps
-
-The next stage is the first actual model-inference experiment.
-
-1. Build the direct long-context baseline.
-2. Run a small pilot to validate answer parsing, latency measurement, logging, retries, and result storage.
-3. Run the baseline on the frozen 120-question sample.
-4. Build the RAG retrieval pipeline.
-5. Run the same frozen questions under the RAG conditions.
-6. Compare accuracy and efficiency across methods and context lengths.
-7. Perform error analysis and summarize the final findings.
-
-## Repository Structure
-
-```text
-rag-vs-long-context/
-├── figures/        # Figures and visualizations
-├── notebooks/      # Research and experimental notebooks
-├── samples/
-│   └── experimental_sample_v1.csv
-├── README.md
-└── requirements.txt
-```
-
-## Tools Used So Far
-
-- Python
-- Google Colab Pro
-- Hugging Face Datasets
-- Pandas / NumPy
-- Matplotlib
-- Gemini API / REST API
-- Git and GitHub
+These findings apply to **one generation model, one fixed RAG configuration, and a limited question sample**. They show a useful accuracy-versus-efficiency trade-off, not a universal winner.
