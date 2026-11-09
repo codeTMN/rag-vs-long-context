@@ -68,6 +68,6 @@ The notebooks were developed in Google Colab. Some read files from the project's
 
 ## Current status
 
-The main experiment, results analysis, and follow-up sensitivity check are complete. Final research write-up and presentation work are the remaining stages.
+Work being done on the main experiment, results analysis, and follow-up sensitivity. Final research write-up and presentation work in progress.
 
 These findings apply to **one generation model, one fixed RAG configuration, and a limited question sample**. They show a useful accuracy-versus-efficiency trade-off, not a universal winner.
